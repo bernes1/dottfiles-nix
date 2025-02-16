@@ -20,7 +20,7 @@
   then [
     ./home/tmux
     ./home/helix
-    ./home/git/quack
+    ./home/git/quack.nix
   ]
   else[
     ./home/tmux

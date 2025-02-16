@@ -27,5 +27,4 @@
     ./home/helix
     ./home/git
   ]; 
-  ;
 }

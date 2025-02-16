@@ -36,7 +36,6 @@
       "visual-studio-code"
       "iterm2"
       "rectangle"
-      "kicad"
       "mullvadvpn"
       "signal"
       "element"
@@ -49,9 +48,8 @@
       "transmission"
     ];
     # onActivation.cleenup = "zap"; 
-    masApps = {
-      Tailscale = 1475387142; # App Store URL id
-      Wireguard = 1451685025;
+    masApps = { 
+      Wireguard = 1451685025;# App Store URL id
       Microsoft-outlook = 985367838;
     };
   };

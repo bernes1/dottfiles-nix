@@ -15,6 +15,7 @@
       specialArgs = { inherit self; };
       modules = [
         ./hosts/sovepose/configuration.nix
+        ./hosts/quack/configuration.nix
 
         home-manager.darwinModules.home-manager
         {

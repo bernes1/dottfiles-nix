@@ -16,9 +16,16 @@
   };
   programs.fzf.enable = true;
   programs.dircolors.enable = true;
-  imports = [
+  imports = if hostname == "quack"
+  then [
+    ./home/tmux
+    ./home/helix
+    ./home/git/quack
+  ]
+  else[
     ./home/tmux
     ./home/helix
     ./home/git
-  ];
+  ]; 
+  ;
 }

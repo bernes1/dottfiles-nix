@@ -15,6 +15,26 @@
       specialArgs = { inherit self; };
       modules = [
         ./hosts/sovepose/configuration.nix
+
+        home-manager.darwinModules.home-manager
+        {
+          users.users.duck.home = "/Users/duck";
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.duck = import ./home.nix;
+
+          # Optionally, use home-manager.extraSpecialArgs to pass
+          # arguments to home.nix
+          home-manager.extraSpecialArgs = {
+            hostname = "sovepose"; 
+          };
+        }
+      ];
+    };
+    darwinConfigurations."quack" = darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      specialArgs = { inherit self; };
+      modules = [
         ./hosts/quack/configuration.nix
 
         home-manager.darwinModules.home-manager
@@ -26,6 +46,9 @@
 
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix
+          home-manager.extraSpecialArgs = {
+            hostname = "quack"; 
+          };
         }
       ];
     };

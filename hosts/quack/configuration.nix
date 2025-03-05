@@ -8,7 +8,7 @@
   nix.settings.experimental-features = "nix-command flakes";
   nix.settings.extra-nix-path = "nixpkgs=flake:nixpkgs";
 
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   # Enable alternative shell support in nix-darwin.
   # programs.fish.enable = true;

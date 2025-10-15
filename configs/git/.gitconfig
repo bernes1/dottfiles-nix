@@ -1,0 +1,12 @@
+[user]
+	name = bernes1
+	email = 37117219+bernes1@users.noreply.github.com
+	signingkey = pubkey.pub
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+[core]
+	excludesfile = ~/.gitignore_global
